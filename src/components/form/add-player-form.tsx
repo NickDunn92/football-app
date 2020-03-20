@@ -38,106 +38,108 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
 
     return (  
         <form onSubmit={handleSubmit(onSubmit)}>
-            <Grid columns={2}>
-                <Grid.Row>
+            <div className='add-player-grid'>
+                <Grid columns={2}>
+                    <Grid.Row>
+                        <Grid.Column>
+                            <Header size={'large'}>Add Player</Header>
+                        </Grid.Column>
+                    </Grid.Row>
                     <Grid.Column>
-                        <Header size={'large'}>Add Player</Header>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='First Name'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="firstname"
+                                    control={control}
+                                />
+                                {errors.firstname && <p>{errors.firstname.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='Last Name'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="lastname"
+                                    control={control}
+                                />
+                                {errors.lastname && <p>{errors.lastname.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='Nationality'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="nationality"
+                                    control={control}
+                                />
+                                {errors.nationality && <p>{errors.nationality.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
                     </Grid.Column>
-                </Grid.Row>
-                <Grid.Column>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='First Name'
-                                    labelPosition='right corner'
-                                />}
-                                name="firstname"
-                                control={control}
-                            />
-                            {errors.firstname && <p>{errors.firstname.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='Last Name'
-                                    labelPosition='right corner'
-                                />}
-                                name="lastname"
-                                control={control}
-                            />
-                            {errors.lastname && <p>{errors.lastname.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='Nationality'
-                                    labelPosition='right corner'
-                                />}
-                                name="nationality"
-                                control={control}
-                            />
-                            {errors.nationality && <p>{errors.nationality.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid.Column>
-                <Grid.Column>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='Team'
-                                    labelPosition='right corner'
-                                />}
-                                name="team"
-                                control={control}
-                            />
-                            {errors.team && <p>{errors.team.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='Age'
-                                    labelPosition='right corner'
-                                />}
-                                name="age"
-                                control={control}
-                            />
-                            {errors.age && <p>{errors.age.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Controller
-                                as={<Input
-                                    focus
-                                    placeholder='Position'
-                                    labelPosition='right corner'
-                                />}
-                                name="position"
-                                control={control}
-                            />
-                            {errors.position && <p>{errors.position.message}</p>}
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid.Column>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Button>Submit</Button>
-                        </Grid.Column>
-                    </Grid.Row>
-            </Grid>
+                    <Grid.Column>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='Team'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="team"
+                                    control={control}
+                                />
+                                {errors.team && <p>{errors.team.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='Age'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="age"
+                                    control={control}
+                                />
+                                {errors.age && <p>{errors.age.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Controller
+                                    as={<Input
+                                        focus
+                                        placeholder='Position'
+                                        labelPosition='right corner'
+                                    />}
+                                    name="position"
+                                    control={control}
+                                />
+                                {errors.position && <p>{errors.position.message}</p>}
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid.Column>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <Button>Submit</Button>
+                            </Grid.Column>
+                        </Grid.Row>
+                </Grid>
+            </div>
         </form>
     );
 }
