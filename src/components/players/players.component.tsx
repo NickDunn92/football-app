@@ -3,6 +3,7 @@ import { Player } from '../../types';
 import { PlayersTable } from '../table/players';
 import { Button, Icon } from 'semantic-ui-react';
 import { AddPlayerForm, AddPlayerFormData } from '../form';
+import './players.component.scss';
 
 export interface PlayersComponentProps {
     Player: Player[];

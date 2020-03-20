@@ -6,8 +6,6 @@ export interface FixturesProps {
  
 export const Fixtures: React.FC<FixturesProps> = () => {
     return (  
-        <>
-            Fixtures
-        </>
+        <h1>Fixtures</h1>
     );
 }

@@ -10,7 +10,7 @@ export interface NavbarProps extends RouteComponentProps {
 const Navbar: React.FC<NavbarProps> = ({ user, onLogout, history }) => {
 
     const handleHomeClick = () => {
-        history.push('/home');
+        history.push('/');
     }
 
     const handlePlayersClick = () => {
@@ -28,6 +28,10 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout, history }) => {
     const handleProfileClick = () => {
         history.push('/profile');
     }    
+
+    const handleLoginClick = () => {
+        history.push('/login')
+    }
 
     const renderUserInformation = () => {
         if (user) {
@@ -58,6 +62,9 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout, history }) => {
         } else {
             return (
                 <>
+                    <Menu.Item position='right' onClick={handleLoginClick}>
+                        Log In
+                    </Menu.Item>
                 </>
             )
         }

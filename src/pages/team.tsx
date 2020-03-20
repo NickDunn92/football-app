@@ -6,8 +6,6 @@ export interface TeamProps {
  
 export const Team: React.FC<TeamProps> = () => {
     return (  
-        <>
-            Team
-        </>
+        <h1>Team</h1>
     );
 }

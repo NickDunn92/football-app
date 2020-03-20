@@ -6,8 +6,6 @@ export interface ProfileProps {
  
 export const Profile: React.FC<ProfileProps> = () => {
     return (  
-        <>
-            Profile
-        </>
+        <h1>Profile</h1>
     );
 }

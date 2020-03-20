@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Header, Table } from 'semantic-ui-react';
+import { Table } from 'semantic-ui-react';
 import './league-table.css';
 
 export interface LeagueTableProps {}
@@ -25,13 +25,7 @@ export const LeagueTable: React.FC<LeagueTableProps> = () => {
             </Table.Header>
             <Table.Body>
                 <Table.Row>
-                    <Table.Cell>
-                        <Header>
-                            <Header.Content>
-                                1
-                            </Header.Content>
-                        </Header>
-                    </Table.Cell>
+                    <Table.Cell>1</Table.Cell>
                     <Table.Cell>Liverpool</Table.Cell>
                     <Table.Cell>29</Table.Cell>
                     <Table.Cell>19</Table.Cell>
