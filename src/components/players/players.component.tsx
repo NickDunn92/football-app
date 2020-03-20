@@ -26,17 +26,21 @@ export const PlayersComponent: React.FC<PlayersComponentProps> = ({ Player, onAd
     const renderButton = () => {
         if (showAddPlayerForm) {
             return (
-                <Button onClick={handleAddNewPlayerButtonClick} icon labelPosition='left'>
-                    <Icon name='cancel' />
-                    Cancel
-                </Button>
+                <div className='cancel-button'>
+                    <Button onClick={handleAddNewPlayerButtonClick} icon labelPosition='left'>
+                        <Icon name='cancel' />
+                        Cancel
+                    </Button>
+                </div>
             )
         } else {
             return (
-                <Button onClick={handleAddNewPlayerButtonClick} icon labelPosition='left'>
-                    <Icon name='add user' />
-                    Add New Player
-                </Button>
+                <div className='add-new-player-button'>
+                    <Button onClick={handleAddNewPlayerButtonClick} icon labelPosition='left'>
+                        <Icon name='add user' />
+                        Add New Player
+                    </Button>
+                </div>
             )
         }
     }

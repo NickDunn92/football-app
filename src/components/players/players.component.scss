@@ -1,4 +1,11 @@
-.ui.button {
-    float: right;
-    margin-right: 45px !important;
-}
+.cancel-button {
+    .ui.button {
+        float: right;
+    }
+} 
+
+.add-new-player-button {
+    .ui.button {
+        float: right;
+    }
+} 
