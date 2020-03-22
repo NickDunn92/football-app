@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import './navbar.scss';
 
 export interface NavbarProps extends RouteComponentProps {
     user: any;
@@ -30,7 +31,11 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout, history }) => {
     }    
 
     const handleLoginClick = () => {
-        history.push('/login')
+        history.push('/login');
+    }
+
+    const handleLeagueClick = () => {
+        history.push('/league');
     }
 
     const renderUserInformation = () => {
@@ -51,6 +56,9 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout, history }) => {
                     </Menu.Item>
                     <Menu.Item onClick={handleFixturesClick}>
                         Fixtures
+                     </Menu.Item>
+                     <Menu.Item onClick={handleLeagueClick}>
+                        League
                      </Menu.Item>
 
                      <Menu.Menu position='right'>

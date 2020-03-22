@@ -1,5 +1,10 @@
 .add-player-grid {
-    .ui.grid {
-        padding-top: 50px;
+    .ui two column grid {
+        margin-top: 5% !important;
+        
     }  
+
+    .ui.button {
+        float: right;
+    }
 }
