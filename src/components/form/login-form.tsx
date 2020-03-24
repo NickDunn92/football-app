@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import { Grid, Input, Button, Header } from 'semantic-ui-react';
+import { Grid, Input, Button } from 'semantic-ui-react';
 
 export interface LoginFormProps {
     onLogin: (data: LoginFormData) => void;
@@ -22,11 +22,6 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     return (  
         <form onSubmit={handleSubmit(onSubmit)}>
             <Grid columns={1} divided>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Header textAlign={'center'} size={'large'}>Login</Header>
-                    </Grid.Column>
-                </Grid.Row>
                 <Grid.Row>
                     <Grid.Column>
                         <Controller 

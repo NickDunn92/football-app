@@ -6,3 +6,4 @@ export * from './team';
 export * from './profile';
 export * from './players';
 export * from './league';
+export * from './register';
