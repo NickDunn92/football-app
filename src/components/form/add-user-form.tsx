@@ -84,6 +84,7 @@ export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddNewUser }) => {
                                 />}
                                 name="email"
                                 control={control}
+                                type="email"
                             />
                             {errors.email && <p>Please enter your email</p>}
                         </Grid.Column>
@@ -96,6 +97,7 @@ export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddNewUser }) => {
                                 />}
                                 name="password"
                                 control={control}
+                                type="password"
                             />
                             {errors.password && <p>Please enter your password</p>}
                         </Grid.Column>
@@ -108,6 +110,7 @@ export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddNewUser }) => {
                                 />}
                                 name="confirmpassword"
                                 control={control}
+                                type="password"
                             />
                             {errors.password && <p>Please confirm your password</p>}
                         </Grid.Column>

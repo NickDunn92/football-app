@@ -15,7 +15,6 @@ export const Login: React.FC<Props> = (props: Props) => {
                 <Header.Content>Fustbol</Header.Content>
             </Header>
             <LoginForm onLogin={props.handleLogin} />
-            <a href='/register'>Create a profile here</a>
         </>
     );
 }

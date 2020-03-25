@@ -57,7 +57,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="firstname"
                                     control={control}
                                 />
-                                {errors.firstname && <p>{errors.firstname.message}</p>}
+                                {errors.firstname && <p>Please enter a first name</p>}
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
@@ -71,7 +71,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="lastname"
                                     control={control}
                                 />
-                                {errors.lastname && <p>{errors.lastname.message}</p>}
+                                {errors.lastname && <p>Please enter a last name</p>}
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
@@ -85,7 +85,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="nationality"
                                     control={control}
                                 />
-                                {errors.nationality && <p>{errors.nationality.message}</p>}
+                                {errors.nationality && <p>Please enter a nationality</p>}
                             </Grid.Column>
                         </Grid.Row>
                     </Grid.Column>
@@ -101,7 +101,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="team"
                                     control={control}
                                 />
-                                {errors.team && <p>{errors.team.message}</p>}
+                                {errors.team && <p>Please enter a team</p>}
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
@@ -115,7 +115,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="age"
                                     control={control}
                                 />
-                                {errors.age && <p>{errors.age.message}</p>}
+                                {errors.age && <p>Please enter the player's age</p>}
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
@@ -129,7 +129,7 @@ export const AddPlayerForm: React.SFC<AddPlayerFormProps> = ({ onAddNewPlayer })
                                     name="position"
                                     control={control}
                                 />
-                                {errors.position && <p>{errors.position.message}</p>}
+                                {errors.position && <p>Please enter the player's position</p>}
                             </Grid.Column>
                         </Grid.Row>
                     </Grid.Column>

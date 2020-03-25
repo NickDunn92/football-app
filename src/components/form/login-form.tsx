@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Grid, Input, Button } from 'semantic-ui-react';
+import * as yup from 'yup';
 
 export interface LoginFormProps {
     onLogin: (data: LoginFormData) => void;
@@ -11,9 +12,16 @@ export type LoginFormData = {
     password: string;
 }
 
+const schema = yup.object().shape({
+    username: yup.string().required(),
+    password: yup.string().required(),
+})
+
 export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
 
-    const { handleSubmit, control } = useForm<LoginFormData>();
+    const { handleSubmit, control, errors } = useForm<LoginFormData>({
+        validationSchema: schema
+    });
 
     const onSubmit = (data: LoginFormData) => {
         onLogin(data);
@@ -30,6 +38,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                             control={control}
                             defaultValue=""
                         />
+                        {errors.username && <p>Please enter your username</p>}
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -41,6 +50,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                             defaultValue=""
                             type='password'
                         />
+                        {errors.password && <p>Please enter your password</p>}
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -48,6 +58,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                         <Button>
                             Login
                         </Button>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column>
+                        <a href='/register'>Create your Futsbol profile here</a>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
